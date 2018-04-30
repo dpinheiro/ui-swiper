@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-slides', SlidesDirective );
+  .directive ( 'ppSlides', SlidesDirective );
 
 /* @ngInject */
 function SlidesDirective () {
@@ -10,7 +10,7 @@ function SlidesDirective () {
     restrict : 'E',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-wrapper" ng-transclude></div>',
     priority : 2,
     controller : function () {}

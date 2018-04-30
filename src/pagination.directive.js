@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-pagination', PaginationDirective );
+  .directive ( 'ppPagination', PaginationDirective );
 
 /* @ngInject */
 function PaginationDirective () {
@@ -10,7 +10,7 @@ function PaginationDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-pagination" ng-transclude></div>',
     priority : 2
   };

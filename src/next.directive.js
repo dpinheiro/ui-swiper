@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-next', NextDirective );
+  .directive ( 'ppNext', NextDirective );
 
 /* @ngInject */
 function NextDirective () {
@@ -10,7 +10,7 @@ function NextDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-button-next" ng-transclude></div>',
     priority : 2
   };

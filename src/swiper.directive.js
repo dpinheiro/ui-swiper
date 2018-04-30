@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-swiper', SwiperDirective );
+  .directive ( 'ppSwiper', SwiperDirective );
 
 /* @ngInject */
 function SwiperDirective (Swiper, $rootScope, $timeout) {

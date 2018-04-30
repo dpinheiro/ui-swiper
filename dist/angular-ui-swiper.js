@@ -3776,7 +3776,7 @@ function SwiperFactory (Dom7, $parse) {
 SwiperDirective.$inject = ["Swiper", "$rootScope", "$timeout"];
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-swiper', SwiperDirective );
+  .directive ( 'ppSwiper', SwiperDirective );
 
 /* @ngInject */
 function SwiperDirective (Swiper, $rootScope, $timeout) {
@@ -3858,7 +3858,7 @@ function generateUUID() {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-slides', SlidesDirective );
+  .directive ( 'ppSlides', SlidesDirective );
 
 /* @ngInject */
 function SlidesDirective () {
@@ -3866,7 +3866,7 @@ function SlidesDirective () {
     restrict : 'E',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-wrapper" ng-transclude></div>',
     priority : 2,
     controller : function () {}
@@ -3878,7 +3878,7 @@ function SlidesDirective () {
 SlideDirective.$inject = ["$rootScope"];
 angular
   .module ('ui.swiper')
-  .directive ('pp-slide', SlideDirective);
+  .directive ('ppSlide', SlideDirective);
 
 /* @ngInject */
 function SlideDirective ($rootScope) {
@@ -3887,7 +3887,7 @@ function SlideDirective ($rootScope) {
     replace : true,
     transclude : true,
     template : '<div class="swiper-slide" ng-transclude></div>',
-    require : '^slides',
+    require : '^pp-slides',
     priority : 3,
     link : function (scope, element, attrs) {
       var eventId = scope.$parent.$parent.$parent.uuid;
@@ -3904,7 +3904,7 @@ function SlideDirective ($rootScope) {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-prev', PrevDirective );
+  .directive ( 'ppPrev', PrevDirective );
 
 /* @ngInject */
 function PrevDirective () {
@@ -3912,7 +3912,7 @@ function PrevDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-button-prev" ng-transclude></div>',
     priority : 2,
     scope: true
@@ -3923,7 +3923,7 @@ function PrevDirective () {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-pagination', PaginationDirective );
+  .directive ( 'ppPagination', PaginationDirective );
 
 /* @ngInject */
 function PaginationDirective () {
@@ -3931,7 +3931,7 @@ function PaginationDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-pagination" ng-transclude></div>',
     priority : 2
   };
@@ -3941,7 +3941,7 @@ function PaginationDirective () {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-next', NextDirective );
+  .directive ( 'ppNext', NextDirective );
 
 /* @ngInject */
 function NextDirective () {
@@ -3949,7 +3949,7 @@ function NextDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-button-next" ng-transclude></div>',
     priority : 2
   };

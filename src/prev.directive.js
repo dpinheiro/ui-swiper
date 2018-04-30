@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pp-prev', PrevDirective );
+  .directive ( 'ppPrev', PrevDirective );
 
 /* @ngInject */
 function PrevDirective () {
@@ -10,7 +10,7 @@ function PrevDirective () {
     restrict : 'AE',
     transclude : true,
     replace : true,
-    require : '^swiper',
+    require : '^pp-swiper',
     template : '<div class="swiper-button-prev" ng-transclude></div>',
     priority : 2,
     scope: true
