@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pagination', PaginationDirective );
+  .directive ( 'pp-pagination', PaginationDirective );
 
 /* @ngInject */
 function PaginationDirective () {

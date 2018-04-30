@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'prev', PrevDirective );
+  .directive ( 'pp-prev', PrevDirective );
 
 /* @ngInject */
 function PrevDirective () {

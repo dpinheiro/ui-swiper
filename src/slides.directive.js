@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'slides', SlidesDirective );
+  .directive ( 'pp-slides', SlidesDirective );
 
 /* @ngInject */
 function SlidesDirective () {

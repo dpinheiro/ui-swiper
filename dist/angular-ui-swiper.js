@@ -3776,7 +3776,7 @@ function SwiperFactory (Dom7, $parse) {
 SwiperDirective.$inject = ["Swiper", "$rootScope", "$timeout"];
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'swiper', SwiperDirective );
+  .directive ( 'pp-swiper', SwiperDirective );
 
 /* @ngInject */
 function SwiperDirective (Swiper, $rootScope, $timeout) {
@@ -3858,7 +3858,7 @@ function generateUUID() {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'slides', SlidesDirective );
+  .directive ( 'pp-slides', SlidesDirective );
 
 /* @ngInject */
 function SlidesDirective () {
@@ -3878,7 +3878,7 @@ function SlidesDirective () {
 SlideDirective.$inject = ["$rootScope"];
 angular
   .module ('ui.swiper')
-  .directive ('slide', SlideDirective);
+  .directive ('pp-slide', SlideDirective);
 
 /* @ngInject */
 function SlideDirective ($rootScope) {
@@ -3904,7 +3904,7 @@ function SlideDirective ($rootScope) {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'prev', PrevDirective );
+  .directive ( 'pp-prev', PrevDirective );
 
 /* @ngInject */
 function PrevDirective () {
@@ -3923,7 +3923,7 @@ function PrevDirective () {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pagination', PaginationDirective );
+  .directive ( 'pp-pagination', PaginationDirective );
 
 /* @ngInject */
 function PaginationDirective () {
@@ -3941,7 +3941,7 @@ function PaginationDirective () {
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'next', NextDirective );
+  .directive ( 'pp-next', NextDirective );
 
 /* @ngInject */
 function NextDirective () {

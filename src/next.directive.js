@@ -2,7 +2,7 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'next', NextDirective );
+  .directive ( 'pp-next', NextDirective );
 
 /* @ngInject */
 function NextDirective () {
